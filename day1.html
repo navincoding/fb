@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="">
+    <h1>My First Javascript</h1>
+    <button type="button" onclick='document.getElementById("date").innerHTML = Date()'>Click me to display Date and Time</button>
+    <p id="date"></p>
+    </div>
+
+    <div>
+        <h1>What Can Javascript Do?</h1>
+        <p id="change">Javascript can change HTML content.</p>
+        <button type="button" onclick='document.getElementById("change").innerHTML = "Hello Javascript!"'>Click me!</button>
+    </div>
+    <hr>
+    
+    <div style="display:flex;justify-content: center;">
+        <div><button onclick="document.getElementById('img-bulb').src='./image/Picsart_24-04-22_23-46-43-546.png'">Turn off</button></div>
+
+        <img id="img-bulb"src="./image/Picsart_24-04-22_23-46-43-546.png" width="200px">
+        
+        <div><button  onclick="document.getElementById('img-bulb').src='./image/Picsart_24-04-22_23-48-56-124.png'">Turn on</button></div>
+    </div>
+    <hr>
+
+    <div>
+        <h1>What Can Javascript Do?</h1>
+        <p id="font-size">Javascript can change the style of an HTML element.</p>
+
+        <button type="button" onclick="document.getElementById('font-size').style.fontSize = '30px'">Click me!</button>
+    </div>
+
+    <hr>
+    <div>
+        <h1>What Can Javascript Do?</h1>
+        <p id="hide">Javascript can change the style of an HTML element.</p>
+
+        <button type="button" onclick="document.getElementById('hide').style.display = 'none'">Click me!</button>
+    </div>
+
+    <hr>
+    <div>
+        <h1>What Can Javascript Do?</h1>
+        <p id="display" style="display: none;">Javascript can change the style of an HTML element.</p>
+
+        <button type="button" onclick="document.getElementById('display').style.display = 'block'">Click me!</button>
+    </div>
+
+    <hr>
+    <div>
+        <h1>What Can Javascript Do?</h1>
+        <p>Javascript can change the style of an HTML element.</p>
+        <p id="cal"></p>
+        <button type="button" onclick="document.getElementById('cal').innerHTML = 5+5">Click me  </button>
+    </div>
+
+    <hr>
+    <div>
+        <h1>Alert message</h1>
+        
+        <p id="alert"></p>
+        <button type="button" onclick="window.alert('Welcome')">Click me  </button>
+    </div>
+
+    <hr>
+
+    <div>
+        <h1>Javascript String Operators</h1>
+        <p>All conditional operators can be used on both numbers and string.</p>
+        <p id="oper"></p>
+    </div>
+
+    <script>
+        let text1 = "A";
+        let text2 = "B";
+        let result = text2 < text1;
+        document.getElementById("oper").innerHTML = "Is A less than B?" + result;
+    </script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>facebook</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<div id="create">
+    <div class="create">
+        <div class="sign-up">
+            <h1>Sign Up<span><i class="fa-solid fa-xmark" onclick="altc()"></i></span></h1>
+            <p style="margin-bottom: 10px;font-size: 20px;">It's quick and easy</p>
+            
+            <hr>
+
+            <div class="input">
+                <input type="text" placeholder="First name" class="input-sbox" required>
+                <input type="text" placeholder="Last name" class="input-sbox"required>
+                <input type="text" placeholder="Mobile number or email address"required>
+                <input type="password" placeholder="New password"required>
+            </div>
+
+            <label>Date of birth</label>
+            <input type="date"><br>
+
+            <p style="font-size: 10px;color: gray;">People who use our service may have uploaded your contact information to Facebook. Learn more.
+
+                By clicking Sign Up, you agree to our Terms, Privacy Policy and Cookies Policy. You may receive SMS notifications from us and can opt out at any time.</p>
+                
+            <button  type="submit">Sign up</button>
+        </div>
+
+    </div>
+</div>
+    <div class="main">
+
+        <div class="box1">
+            <h1 onmouseenter="formopen()" onmouseleave="formclose()">facebook</h1>
+            <p>Facebook helps you connect and share with the people in your life.</p>
+        </div>
+
+        <div class="box2">
+            <div class="card">
+                <form name="myform"  method="get" onsubmit="return validateform()" action="./day1.html">
+                <div class="card1">
+                <input type="email" type="number" name="name" placeholder="Email address or phone number">
+                </div>
+
+                <div class="card1">
+                <input type="password" name="password" placeholder="Password">
+                </div>
+
+                <div class="card1">
+                <button type="submit">Log in</button>
+                </div>
+
+                <div class="card1">
+                <a href="#">Forgotten password?</a>
+                </div>
+                <div class="card1">
+                <hr>
+                </div>
+                <div class="card1">
+                <button type="button" style="background-color: #42b72a;"  onclick="alt()">Create new account</button>
+                </div>
+                </form>
+            </div>
+            <div id="marquee">
+            <marquee behavior="alternate" direction="left" width="200px" loop="1"><img style="width: 300px;height: 300px;"src="./image/800b600.gif" alt=""></marquee>
+            </div>
+        </div>
+
+    </div>
+
+    
+    <script>
+        function formopen(){
+            
+            document.getElementById("marquee").style.display="block";
+        };
+        function formclose(){
+            
+            document.getElementById("marquee").style.display="none";
+        };
+
+        function alt(){
+            document.getElementById("create").style.display="block";
+        }
+        
+        function altc(){
+            document.getElementById("create").style.display="none";
+        }
+
+
+
+        // validtion code for inputs
+
+        function validateform(){
+
+        var name = document.myform.name.value;
+        var password = document.myform.password.value;
+
+        if(name==null || name == ""){
+
+            alert("gmail cant be blank")
+            
+            return false;
+        
+        }
+        else if(password.length<6){
+            alert("password must be at least 6 characters long");
+            return false;
+        }
+
+    }
+    </script>
+</body>
+</html>
